@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Codedamn - Quiz Project</title>
-</head>
+  </head>
 
-<body>
-    <header>
-        <a id=leaderboard>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
-        </i></a> 
+  <body>
+    <div class="wrapper">
+      <header class="bg-b p-1 t-white">
+        <a id="leaderboard"
+          >View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+        </a>
+        <span>Timer:<span>50</span></span>
+      </header>
+      <main>
+        <!-- <div class="main-card">
+          <div class="card-content">
+            <h1>Coding Quiz Challenge</h1>
+            <p>
+              Try to answer to following code-related questionswithin the time
+              limit.
+            </p>
+            <p>
+              Keep in mind that incorrect answers will penalize your score/time
+              by ten seconds
+            </p>
+            <button class="btn bg-b t-white">Start Quiz</button>
+          </div>
+        </div> -->
+        <div class="main-card">
+          <div class="card-content">
+            <h1>Coding Quiz Challenge</h1>
+            <div>
+              <div class="options p-1 bg-b t-white">
+                <input type="radio" name="gender" value="male" id="male" />
 
-    </header>
-    <main>
-        <h1>Hello World!</h1>
-    </main>
+                <label for="male">male</label>
+              </div>
+              <div class="options p-1 bg-b t-white">
+                <input type="radio" name="gender" value="female" id="female" />
+                <label for="female">Female</label>
+              </div>
+              <div class="options p-1 bg-b t-white">
+                <input type="radio" name="gender" value="other" id="other" />
+                <label for="other">other</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
     <script src="assets/data.js"></script>
-</body>
-
+  </body>
 </html>
