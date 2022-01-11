@@ -18,30 +18,34 @@
         <a id="leaderboard"
           >View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
         </a>
-        <span>Timer:<span>50</span></span>
+        <span>Timer:<span class="timer">50</span></span>
       </header>
       <main>
-        <!-- <div class="main-card">
-          <div class="card-content">
-            <h1>Coding Quiz Challenge</h1>
-            <p>
-              Try to answer to following code-related questionswithin the time
-              limit.
-            </p>
-            <p>
-              Keep in mind that incorrect answers will penalize your score/time
-              by ten seconds
-            </p>
-            <button class="btn bg-b t-white">Start Quiz</button>
-          </div>
-        </div> -->
         <div class="main-card">
+          <div class="card-content">
+            <div class="render-content">
+              <h1>Coding Quiz Challenge</h1>
+              <p>
+                Try to answer to following code-related questionswithin the time
+                limit.
+              </p>
+              <p>
+                Keep in mind that incorrect answers will penalize your
+                score/time by ten seconds
+              </p>
+              <button class="btn bg-b t-white" onclick="startQuiz()">
+                Start Quiz
+              </button>
+            </div>
+            <div class="answer" hidden></div>
+          </div>
+        </div>
+        <!-- <div class="main-card">
           <div class="card-content">
             <h1>Coding Quiz Challenge</h1>
             <div>
               <div class="options p-1 bg-b t-white">
                 <input type="radio" name="gender" value="male" id="male" />
-
                 <label for="male">male</label>
               </div>
               <div class="options p-1 bg-b t-white">
@@ -54,7 +58,35 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+        <!-- <div class="main-card">
+          <div class="card-content">
+            <h1>HighScores</h1>
+            <div>
+              <ol>
+                <li>rma</li>
+                <li>rma</li>
+                <li>rma</li>
+                <li>rma</li>
+              </ol>
+              <button class="btn bg-b t-white">Go Back</button>
+              <button class="btn bg-b t-white">Clear Highscores</button>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="main-card">
+          <div class="get-done card-content">
+            <h1>All done!</h1>
+            <div>
+              <p>Your final score is <span class="score">9</span></p>
+              <form>
+                <label for="">Enter initials:</label>
+                <input type="text" />
+                <button class="btn bg-b t-white">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div> -->
       </main>
     </div>
 

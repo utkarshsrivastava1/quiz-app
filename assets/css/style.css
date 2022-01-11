@@ -49,6 +49,7 @@ body {
 .card-content .btn {
   border: 0;
   padding: 0.7rem;
+  border-radius: 4px;
 }
 .card-content h1 {
   font-size: 24px;
@@ -64,6 +65,13 @@ body {
 @media (min-width: 750px) {
   .card-content {
     padding: 3rem 3.4rem;
-    margin: 0;
   }
+}
+.get-done input {
+  padding: 0.5rem 0.1rem;
+}
+.answer {
+  border-top: 2px solid #5555;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
 }
