@@ -96,6 +96,17 @@ function showHighScore() {
             </div>
 `;
     cardContent.innerHTML = data;
+  } else {
+    let data = `
+    <h1>HighScores</h1>
+                <div>
+                  <ol class="userList">
+                  </ol>
+                  <button class="btn bg-b t-white" onclick="goBack()">Go Back</button>
+                  <button class="btn bg-b t-white" onclick="clearStore()">Clear Highscores</button>
+                </div>
+    `;
+    cardContent.innerHTML = data;
   }
 }
 function submitForm(e) {
@@ -103,21 +114,23 @@ function submitForm(e) {
   const val = document.querySelector(".userName");
   let storedData = localStorage.getItem("highscore");
 
-  if (storedData) {
-    localStorage.setItem(
-      "highscore",
-      JSON.stringify([
-        ...JSON.parse(storedData),
-        { name: val.value, score: totalScore },
-      ])
-    );
-  } else {
-    localStorage.setItem(
-      "highscore",
-      JSON.stringify([{ name: val.value, score: totalScore }])
-    );
+  if (val.value) {
+    if (storedData) {
+      localStorage.setItem(
+        "highscore",
+        JSON.stringify([
+          ...JSON.parse(storedData),
+          { name: val.value, score: totalScore },
+        ])
+      );
+    } else {
+      localStorage.setItem(
+        "highscore",
+        JSON.stringify([{ name: val.value, score: totalScore }])
+      );
+    }
+    showHighScore();
   }
-  showHighScore();
 }
 
 function allDoneScreen() {
