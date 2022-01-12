@@ -59,7 +59,7 @@ function goBack() {
   if(timerCount !== 50){
 timerCount = 50;
   }
-  timer.innerHTML = timerCount;
+  timer.innerHTML = '';
   cardContent.innerHTML = `
   <h1>Coding Quiz Challenge</h1>
               <p>
@@ -109,7 +109,7 @@ function showHighScore() {
   if(countDownTimer){
 clearInterval(countDownTimer);
       timerCount = 50;
-      timer.innerHTML = timerCount;
+      timer.textContent = '';
   }
   
   if (storedData) {
@@ -176,7 +176,7 @@ function checkAns(e, obj) {
   }
   if (obj + 1 === questions.length) {
     clearInterval(countDownTimer);
-    timer.textContent = 0;
+    // timer.textContent = 0
     allDoneScreen();
     // show done screen
   } else {
@@ -203,7 +203,7 @@ function quizQuestionSelector(quesNO) {
     return ques;
   }
   let data = `
-    <h1>${question.questionText}</h1>
+    <h1 class="question">${question.questionText}</h1>
     <div>
       ${quizQuestion()}
     </div>
@@ -214,6 +214,7 @@ function quizQuestionSelector(quesNO) {
 
 // event listener
 function startQuiz() {
+    timer.innerHTML = timerCount;
   quizQuestionSelector(0);
   
   countDownTimer = setInterval(() => {
